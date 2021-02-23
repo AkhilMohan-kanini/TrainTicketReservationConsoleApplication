@@ -55,9 +55,13 @@ namespace TrainTicketReservationConsoleApplication
             {
                 return totalTicketCost;
             }
-            else
+            else if(discount==100)
             {
-                return (discount / 100) * totalTicketCost;
+                return 0;
+            }
+            else 
+            {
+                return  totalTicketCost - (totalTicketCost * discount/100);
             }
 
         }
